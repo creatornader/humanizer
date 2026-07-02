@@ -128,6 +128,7 @@ The skill also includes a final "obviously AI generated" audit pass and a second
 | 28 | **Signposting announcements** | "Let's dive in", "Here's what you need to know" | Start with the content |
 | 29 | **Fragmented headers** | "## Performance" + "Speed matters." | Let the heading do the work |
 | 30 | **Diff-anchored writing** | "This function was added to replace..." | Describe what it does, not what changed |
+| 31 | **Catalog sentences after a colon** | "The value is clear: speed, trust, and alignment" | Name the actor and action |
 
 ### Communication Patterns
 
@@ -180,6 +181,7 @@ The skill also includes a final "obviously AI generated" audit pass and a second
 
 ## Version History
 
+- **2.7.3** - Local fork: added pattern #31 for catalog sentences after a colon without banning useful colons.
 - **2.7.0** - Added pattern #30 (diff-anchored writing); made em/en dashes a hard cut rather than "overuse"; expanded #21 to cover speculative gap-filling ("maintains a low profile"). 30 patterns total.
 - **2.6.0** - Cleanup pass: consolidated the duplicated workflow sections, gated the personality guidance to content where voice is wanted, removed the model-fingerprinting subsection, and condensed the worked example. No change to the 29 patterns.
 - **2.5.1** - Added a passive-voice / subjectless-fragment rule, raising the total to 29 patterns

@@ -1,6 +1,6 @@
 ---
 name: humanizer
-version: 2.7.1
+version: 2.7.3
 description: |
   Remove signs of AI-generated writing from text. Use when editing or reviewing
   text to make it sound more natural and human-written. Based on Wikipedia's
@@ -8,7 +8,7 @@ description: |
   inflated symbolism, promotional language, superficial -ing analyses, vague
   attributions, em dash overuse, rule of three, AI vocabulary words and
   phrase patterns like `load[- ]bearing`, passive voice, negative
-  parallelisms, and filler phrases.
+  parallelisms, catalog-sentence colon lists, and filler phrases.
 license: MIT
 compatibility: claude-code opencode
 allowed-tools:
@@ -220,7 +220,6 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 
 **After:**
 > The event includes talks and panels. There's also time for informal networking between sessions.
-
 
 ### 11. Elegant Variation (Synonym Cycling)
 
@@ -482,6 +481,25 @@ Before returning the final rewrite, scan it for `—` and `–`. Any hit means t
 
 **After:**
 > This function uses a hash map for O(1) lookups, avoiding the O(n²) cost of naive iteration.
+
+
+### 31. Catalog Sentences After a Colon
+
+**Problem:** AI prose often writes a leading claim, adds a colon, then packs the value proposition into a tidy list of verbs or nouns. This is especially obvious when the sentence also has a rule-of-three rhythm, such as "control X, coordinate Y, and prove Z." The colon makes the line feel like slide copy rather than human prose. It also hides the concrete actor and action.
+
+**Before:**
+> The platform gives teams a verifiable action layer: control what runs, coordinate what carries forward, and prove what happened.
+
+**After:**
+> The platform records each agent action so teams can decide what runs, carry context into later work, and prove what happened.
+
+**Before:**
+> The value proposition is clear: faster onboarding, stronger governance, and better alignment.
+
+**After:**
+> The product shortens onboarding and gives managers a clearer way to review work.
+
+**Rule:** Do not automatically ban colons. Keep a colon when it introduces a true explanation, command, definition, or code-oriented label. Rewrite it when it introduces a polished catalog, especially a list of abstract benefits. Treat this as a cluster tell, not proof by itself.
 
 
 ## DETECTION GUIDANCE
